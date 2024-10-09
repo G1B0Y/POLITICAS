@@ -43,11 +43,6 @@ h1, h2 {
     line-height: 1.6;
 }
 
-/* Estilo para el texto en negrita */
-.content p span {
-    font-weight: bold;
-}
-
 /* Responsividad para dispositivos móviles */
 @media (max-width: 768px) {
     .container {
@@ -61,22 +56,24 @@ h1, h2 {
     }
 }
 
-/* Estilo para listas de ítems */
+/* Estilo para listas de ítems con viñetas */
 ul#lista-derechos, ul#lista-obtencion-datos {
-    list-style-position: inside;
+    list-style-type: disc; /* Usar viñetas tipo disco para los ítems */
+    list-style-position: inside; /* Coloca la viñeta dentro del contenedor del ítem */
+    padding-left: 20px; /* Añadir espacio para las viñetas */
 }
 
 ul#lista-derechos li, ul#lista-obtencion-datos li {
-    display: flex;
+    display: flex; /* Usar flex para alinear el texto y los botones */
     justify-content: space-between; /* Coloca el texto a la izquierda y los botones a la derecha */
-    align-items: center;
-    margin-bottom: 10px;
+    align-items: center; /* Alinea verticalmente los ítems */
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
 }
 
 /* Estilo para el contenedor de botones de edición y eliminación */
 .edit-delete {
     display: flex;
-    gap: 5px;
+    gap: 5px; /* Espacio entre los botones */
 }
 
 /* Estilos para los botones de edición y eliminación */
@@ -89,14 +86,8 @@ ul#lista-derechos li, ul#lista-obtencion-datos li {
     border-radius: 4px;
 }
 
-.edit-btn:hover {
+.edit-btn:hover, .delete-btn:hover {
     background-color: #e0e0e0;
-    color: blue;
-}
-
-.delete-btn:hover {
-    background-color: #e0e0e0;
-    color: red;
 }
 
 /* Estilo mejorado para los botones de añadir */
@@ -124,8 +115,6 @@ ul#lista-derechos li, ul#lista-obtencion-datos li {
     transform: translateY(0); /* Regresa el botón a su posición original */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduce la sombra al hacer clic */
 }
-
-
 
 /* Estilos para los campos de edición */
 .edit-input {
